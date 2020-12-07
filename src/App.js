@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Flag Interpreter</h1>
+      <h1>🎌Flag Interpreter</h1>
       <input
         placeholder="Paste your flag emoji here"
         onChange={onChangeHandler}
