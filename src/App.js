@@ -7,7 +7,11 @@ var flagDictionary = {
   "🇦🇷": "Argentina",
   "🇮🇳": "India",
   "🇲🇽": "Mexico",
-  "🇵🇹": "Portugal"
+  "🇵🇹": "Portugal",
+  "🇦🇹": "Austria",
+  "🇪🇬": "Egypt",
+  "🇬🇷": "Greece",
+  "🇺🇸": "United States"
 };
 
 var flagArray = Object.keys(flagDictionary);
@@ -32,7 +36,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>🎌Flag Interpreter</h1>
+      <h1>
+        <span role="img" aria-label="flag">
+          🎌
+        </span>
+        Flag Interpreter
+      </h1>
       <input
         placeholder="Paste your flag emoji here"
         onChange={onChangeHandler}
@@ -43,6 +52,8 @@ export default function App() {
         {flagArray.map((flag) => {
           return (
             <span
+              role="img"
+              aria-label={flag}
               onClick={() => flagClickHandler(flag)}
               key={flag}
               className="flagHolder"
