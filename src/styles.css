@@ -11,3 +11,9 @@ input {
   padding: 1rem;
   width: 60%;
 }
+
+.outputDiv {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  font-size: 20px;
+}
