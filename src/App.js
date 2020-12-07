@@ -19,8 +19,17 @@ export default function App() {
     var userInput = event.target.value;
     console.log(userInput);
     var meaning = flagDictionary[userInput];
+
+    if (meaning === undefined) {
+      meaning = "We don't know that flag currently :(";
+    }
     setMeaning(meaning);
   }
+
+  function flagClickHandler(flag) {
+    setMeaning(flagDictionary[flag]);
+  }
+
   return (
     <div className="App">
       <h1>Flag Interpreter</h1>
@@ -29,7 +38,15 @@ export default function App() {
       <div className="flagDiv">
         <p>Currently we know these flags</p>
         {flagArray.map((flag) => {
-          return <span className="flagHolder">{flag}</span>;
+          return (
+            <span
+              onClick={() => flagClickHandler(flag)}
+              key={flag}
+              className="flagHolder"
+            >
+              {flag}
+            </span>
+          );
         })}
       </div>
     </div>
