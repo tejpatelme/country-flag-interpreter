@@ -25,6 +25,8 @@ input {
   background-color: #cccccc;
   padding: 0.5rem;
   border-radius: 8px;
+  width: 60%;
+  margin: auto;
 }
 
 .flagDiv p {
