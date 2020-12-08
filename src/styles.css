@@ -34,6 +34,10 @@ input {
   margin-bottom: 0.75rem;
 }
 
+.flagDiv span {
+  display: inline-block;
+}
+
 .flagDiv .flagHolder {
   padding: 0.5rem;
   font-size: 32px;
